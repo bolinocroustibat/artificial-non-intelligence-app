@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'screens/main_screen.dart';
+import 'components/button.dart';
+import 'components/center_screen.dart';
 
 void main() {
   runApp(const ArtificialNonIntelligenceApp());
@@ -15,9 +16,16 @@ class ArtificialNonIntelligenceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
-        body: const MainScreenWidget(),
+      home: Center(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            ButtonWidget(buttonText: "I think it's\nAI-GENERATED"),
+            CenterScreenWidget(),
+            ButtonWidget(buttonText: "I think it's\nHUMAN-GENERATED"),
+          ],
+        ),
       ),
     );
   }

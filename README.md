@@ -11,7 +11,6 @@ For the Data and Data Analysis, check the [dedicated Data repo](https://github.c
 ## Built with
 
 This project uses those technologies:
-
 - [Dart](https://dart.dev/)
 - [Flutter](https://flutter.dev/)
 
@@ -27,7 +26,7 @@ Ensure everything is ok by running `flutter doctor` in your terminal.
 ## To run as a web app
 
 ```bash
-flutter run
+flutter run -d chrome
 ```
 
 ## To build as an app

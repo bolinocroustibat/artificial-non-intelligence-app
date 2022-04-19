@@ -5,19 +5,17 @@ import 'package:http/http.dart';
 import '../constants.dart';
 import '../models/question.dart';
 
-class HttpService {
+class GetQuestionHttpService {
   final String questionURL = "$apiURL/questions";
 
-  Future<String> getQuestions() async {
+  Future<Question> getQuestion() async {
     Response res = await get(Uri.parse(questionURL));
 
     if (res.statusCode == 200) {
-      dynamic body = jsonDecode(res.body);
-      String questionStr = body.question;
-      int questionId = body.id;
-      return questionStr;
+      Question question = Question.fromJson(json.decode(res.body));
+      return question;
     } else {
-      throw "Unable to retrieve a question.";
+      throw "Unable to retrieve a question from the API.";
     }
   }
 }

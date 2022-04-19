@@ -1,1 +1,1 @@
-final String apiURL = "https://ani-api.adriencarpentier.com/";
+const String apiURL = "https://ani-api.adriencarpentier.com/";

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Question {
   final int id;
   final String question;
@@ -15,7 +13,7 @@ class Question {
       );
 
   @override
-  String toJsonString() {
+  String toString() {
     return '{ "id": "$id", "question": $question}';
   }
 }
