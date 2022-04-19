@@ -1,7 +1,7 @@
 class Answer {
   final String sessionUid;
   final int questionId;
-  final String answer;
+  final int answer; // can be 1 (real) or 0 (ai).
 
   Answer({
     required this.sessionUid,

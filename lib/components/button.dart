@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../models/answer.dart';
+import '../services/answers.dart';
+
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({Key? key, required this.buttonText}) : super(key: key);
+  const ButtonWidget(
+      {Key? key,
+      required this.buttonText,
+      required this.answerChoice,
+      required this.sendAnswer})
+      : super(key: key);
   final String buttonText;
+  final int answerChoice;
+  final Function sendAnswer;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +23,7 @@ class ButtonWidget extends StatelessWidget {
 
     return TextButton(
       style: buttonStyle,
-      onPressed: () {},
+      onPressed: () => sendAnswer(answerChoice),
       child: Text(buttonText),
     );
   }
