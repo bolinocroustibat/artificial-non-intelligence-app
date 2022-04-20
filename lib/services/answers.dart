@@ -6,7 +6,7 @@ import '../constants.dart';
 import '../models/answer.dart';
 
 Future<Map> postAnswer(Answer answer) async {
-  const String sessionURL = "$apiURL/answers";
+  const String sessionURL = "$API_URL/answers";
 
   Response res = await post(Uri.parse(sessionURL),
       headers: <String, String>{
