@@ -5,7 +5,7 @@ import 'package:http/http.dart';
 import '../constants.dart';
 
 Future<String> getSession() async {
-  const String sessionURL = "$apiURL/sessions";
+  const String sessionURL = "$API_URL/sessions";
 
   Response res = await get(Uri.parse(sessionURL));
 
